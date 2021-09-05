@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useCallback } from "react";
+import CategoryModal from "../../components/CategoryModal";
 import Letter from "../../components/common/Letter";
 import Person from "../../components/common/Person";
 import Header from "../../components/Header";
 import Responsive from "../../lib/styles/Responsive";
 
 const Main = () => {
+  const onCloseModal = useCallback(() => {}, []);
   return (
     <>
       <Header />
@@ -31,6 +33,7 @@ const Main = () => {
           </div>
         </Responsive>
       </div>
+      <CategoryModal onCloseModal={onCloseModal} />
     </>
   );
 };
